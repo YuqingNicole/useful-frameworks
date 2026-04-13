@@ -56,6 +56,17 @@ export default function Home() {
       ]
     },
     {
+      category: "🎨 前端设计",
+      description: "界面逻辑和信息架构设计",
+      items: [
+        "前端逻辑设计 - 四层信息深度模型",
+        "MECE 原则 - 信息分类不重不漏",
+        "渐进式披露 - 按深度递进展示",
+        "施耐德曼法则 - 概览优先缩放筛选",
+        "容器决策树 - 交互组件选择"
+      ]
+    },
+    {
       category: "🔧 技术工具",
       description: "开发和技术相关工具",
       items: [
