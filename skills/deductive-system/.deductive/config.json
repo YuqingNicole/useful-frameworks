@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "mode": "observe",
+  "test_command": "python3 -m pytest -W ignore::pytest.PytestConfigWarning",
+  "lint_commands": [
+    "python3 -m ruff check"
+  ],
+  "test_pattern": "tests/test_ac_*.py",
+  "crystallize_trigger": "\u56fa\u5316|crystallize|\u9501\u5b9a",
+  "max_retry": 3,
+  "timeout": 60
+}

@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "source": "需求文档_融合架构_v6.0_终版.md",
+    "total_rules": 40,
+    "convention": "每个 test_ac_*.py 文件头部需声明 # @covers: N1, D79, T3 等规则ID"
+  },
+  "rules": {
+    "N1": {
+      "name": "可进化",
+      "require": "D83双通道→D86周校准→D27月度学习闭环连通",
+      "ac_test": "test_ac_004_expert_sampling.py, test_ac_006_hspace_persist.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "N2": {
+      "name": "日1000+",
+      "require": "20并发×133s/条，SLA监控+超时处理",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "N3": {
+      "name": "爆款力",
+      "require": "D81真实爆款few-shot+Thompson Sampling+CFE探索",
+      "ac_test": "test_ac_003_fewshot_statemachine.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "N4": {
+      "name": "图文协同",
+      "require": "D84 embedding余弦相似度检测语义偏移",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "N5": {
+      "name": "无副作用",
+      "require": "D79硬约束+D80 RAG+D85前置评估",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "N6": {
+      "name": "大模型原理",
+      "require": "15条LLM原理完备性矩阵全覆盖",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "N7": {
+      "name": "道",
+      "require": "认知三角(组合→验证→超越)+信息瓶颈+跨模态",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "D78": {
+      "name": "管道路由器",
+      "require": "4种管道(full_auto/auto_select/human_assist/human_only)",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "D79": {
+      "name": "场景硬约束",
+      "require": "[MUST INCLUDE]场景还原+[MUST PRESERVE]文化信号注入prompt",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "D80": {
+      "name": "事实校验+RAG",
+      "require": "L1正则5模式+知识库RAG生成前注入",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "D81": {
+      "name": "真实Few-Shot池",
+      "require": "从hot_note_templates查询爆款+PatternExtractor提取viral_pattern",
+      "ac_test": "test_ac_003_fewshot_statemachine.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "D82": {
+      "name": "实物素材注入",
+      "require": "AI生图不可靠时替换真实产品照片",
+      "ac_test": "test_ac_005_phase1.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "D83": {
+      "name": "双通道反馈",
+      "require": "外部24h/72h/168h+内部专家日抽检50条",
+      "ac_test": "test_ac_004_expert_sampling.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "D84": {
+      "name": "语义保真",
+      "require": "embedding-3余弦相似度≥0.6 PASS,降级keyword_overlap",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "D85": {
+      "name": "前置能力评估",
+      "require": "确定性规则引擎,无LLM调用,输出risk_level+constraints",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "D86": {
+      "name": "复合质量评分",
+      "require": "5维加权(fact30%+semantic20%+auth25%+hook15%+format10%)",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "D87": {
+      "name": "四原语统一提取",
+      "require": "Extract(source)→StructuredFeatures统一接口",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "D88": {
+      "name": "批次多样性",
+      "require": "品类配额+钩子去重+模式轮换,重复率≤15%",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "T1": {
+      "name": "高频模式偏好",
+      "require": "D88批次多样性+Thompson 20%探索率",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "T2": {
+      "name": "显式标记遵循",
+      "require": "D79 [MUST INCLUDE]+[MUST PRESERVE]结构化标记",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "T3": {
+      "name": "无推理能力",
+      "require": "D85/D86/D88纯Python确定性,零LLM调用",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "T4": {
+      "name": "知识截止",
+      "require": "D80知识库RAG注入,非硬编码",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "T5": {
+      "name": "自信编造",
+      "require": "D85前置评估+D80事实校验串联",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "R1": {
+      "name": "Temperature缩放",
+      "require": "按情绪差异化:FOMO=0.85,warmth=0.6",
+      "ac_test": "test_ac_005_phase1.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "R2": {
+      "name": "注意力位置敏感",
+      "require": "PROMPT_SECTION_PRIORITY 9级优先级裁切≤2500字",
+      "ac_test": "test_ac_005_phase1.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "R3": {
+      "name": "上下文学习",
+      "require": "D81从数据库查询真实爆款few-shot",
+      "ac_test": "test_ac_003_fewshot_statemachine.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "R4": {
+      "name": "Prompt即程序",
+      "require": "D79/D80/D81规则编码进prompt文本",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "R5": {
+      "name": "Embedding几何",
+      "require": "D84 embedding-3余弦距离语义度量",
+      "ac_test": "test_ac_002_pipeline_wiring.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "C1": {
+      "name": "结构化输出Schema",
+      "require": "每个Extract节点prompt含完整JSON Schema+D13四层防御",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "C2": {
+      "name": "上下文窗口有限",
+      "require": "PROMPT_MAX_CHARS=2500+优先级裁切",
+      "ac_test": "test_ac_005_phase1.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "C3": {
+      "name": "每次调用无状态",
+      "require": "D79/D80/D81每条内容独立构建上下文",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "C4": {
+      "name": "成本=f(tokens)",
+      "require": "SLA_BUDGET精确到每节点+D85前置过滤",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "C5": {
+      "name": "API不可靠",
+      "require": "13节点失败回退路径总表",
+      "ac_test": "test_ac_001_health.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "INV1": {
+      "name": "权重和=1.0",
+      "require": "D86权重归一化assert",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "INV3": {
+      "name": "永久红线",
+      "require": "D77 no_competitor+no_false_claim不可关闭",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "INV4": {
+      "name": "Beta参数≥1",
+      "require": "Thompson α,β≥1.0",
+      "ac_test": "test_ac_006_hspace_persist.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "INV7": {
+      "name": "状态机只向前",
+      "require": "8态白名单转换,CONTENT_STATE_TRANSITIONS",
+      "ac_test": "test_ac_003_fewshot_statemachine.py",
+      "status": "green",
+      "verified_at": "2026-04-13T15:36:41"
+    },
+    "INV8": {
+      "name": "零互动惩罚",
+      "require": "24h无互动β+=3",
+      "ac_test": null,
+      "status": "uncovered"
+    },
+    "SLA": {
+      "name": "单条≤133s",
+      "require": "关键路径133s+80s重试预算",
+      "ac_test": null,
+      "status": "uncovered"
+    }
+  }
+}

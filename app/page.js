@@ -67,6 +67,17 @@ export default function Home() {
       ]
     },
     {
+      category: "🛡️ 开发质量",
+      description: "AI 开发质量守护系统",
+      items: [
+        "演绎法系统 - AI 不跳步、改动不被破坏",
+        "三层防线 - CLAUDE.md + 意图识别 + 门禁测试",
+        "规则覆盖率 - 自动追踪需求守卫状态",
+        "意图识别 - 检测用户犹豫语气",
+        "验收测试 - commit 时确定性验证"
+      ]
+    },
+    {
       category: "🔧 技术工具",
       description: "开发和技术相关工具",
       items: [

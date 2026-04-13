@@ -1,0 +1,12 @@
+{
+  "status": "idle",
+  "total_acs": 0,
+  "total_verified": 0,
+  "total_rules": 0,
+  "rules_covered": 0,
+  "rules_green": 0,
+  "coverage_pct": 0,
+  "satisfaction_pct": 0,
+  "uncovered_rules": [],
+  "last_verified_at": null
+}
