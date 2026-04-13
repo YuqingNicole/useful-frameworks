@@ -56,6 +56,16 @@ export default function Home() {
       ]
     },
     {
+      category: "🎨 设计工具",
+      description: "截图转代码、设计复刻、多方案迭代",
+      items: [
+        "截图转 HTML - screenshot-to-prototype",
+        "截图转 Pencil - 设计复刻",
+        "Variant 方法 - 不问需求直接出方案",
+        "评审模拟 - 产品/研发/测试视角"
+      ]
+    },
+    {
       category: "🎨 前端设计",
       description: "界面逻辑和信息架构设计",
       items: [
