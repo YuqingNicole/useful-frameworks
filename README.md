@@ -2,17 +2,11 @@
 
 好用的框架和工具集合，持续更新。
 
-## 目录结构
+## 🌐 Live Demo
 
-```
-├── product/          # 产品相关框架
-├── research/         # 研究方法论
-├── decision/         # 决策框架
-├── analysis/         # 分析模型
-└── templates/        # 模板资源
-```
+**https://useful-frameworks.vercel.app/**
 
-## 框架分类
+## 📂 包含的框架
 
 ### 🎯 产品框架
 - **PRD 写作框架** - SPACE-prd-writer
@@ -35,6 +29,24 @@
 - **市场情绪** - 5 核心指标监控
 - **宏观流动性** - 4 维度风险预警
 
+### ✍️ 内容创作
+- **人性化改写** - 去除 AI 味
+- **社交内容** - LinkedIn/Twitter/Instagram
+
+### 🎨 前端设计
+- **前端逻辑设计** - 四层信息深度模型
+- **MECE 原则** - 信息分类不重不漏
+- **渐进式披露** - 按深度递进展示
+
+### 🛡️ 开发质量
+- **演绎法系统** - AI 不跳步、改动不被破坏
+- **三层防线** - CLAUDE.md + 意图识别 + 门禁测试
+
+### 🔧 技术工具
+- **GitHub 操作** - gh CLI 封装
+- **天气查询** - wttr.in/Open-Meteo
+- **网页抓取** - 内容提取
+
 ---
 
-部署地址：[Vercel](https://useful-frameworks.vercel.app/)
+ Built with Next.js + Deploy on Vercel
